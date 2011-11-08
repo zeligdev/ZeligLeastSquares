@@ -1,0 +1,9 @@
+Zelig Least Squares
+
+Four Least-squares based regressions for Zelig v4.
+
+Include:
+ * aov
+ * sur: seemingly unlikely regression
+ * threesls: three-stage least-squares regression
+ * twosls: two-stage least-squares regression

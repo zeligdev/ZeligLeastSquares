@@ -1,0 +1,16 @@
+Package: ZeligLeastSquares
+Maintainer: UNKNOWN AUTHOR <maintainer@software-project.org>
+License: GPL (>=2)
+Title: A Zelig Model
+Author: UNKNOWN AUTHOR
+Description: A Zelig Model
+Version: 0.1
+Packaged: Tue Nov 8 12:42:13 2011
+URL: http://gking.harvard.edu/zelig
+Date: 2011-11-08
+Depends: Zelig
+Collate: 'describe.aov.R' 'describe.sur.R' 'describe.threesls.R'
+    'describe.twosls.R' 'param.aov.R' 'param.sur.R' 'param.threesls.R'
+    'param.twosls.R' 'qi.aov.R' 'qi.sur.R' 'qi.threesls.R'
+    'qi.twosls.R' 'zelig2aov.R' 'zelig2sur.R' 'zelig2threesls.R'
+    'zelig2twosls.R' 'ZeligLeastSquares-package.R'
