@@ -11,28 +11,35 @@ zelig2twosls <- function (formula, ..., data) {
   "%w/o%" <- function(x, y)
     x[!x %in% y]
 
-  formula.eqs <- names(getDependentVariables(formula))
-  instrument.eqs <- names(formula) %w/o% formula.eqs
+  formula<-parse.formula(formula, "twosls")
+  tt<-terms(formula)
 
-  # 
-  inst <- if (length(instrument.eqs) == 1)
-    formula[[instrument.eqs]]
-
-  else if (length(instrument.eqs) > 1)
-    formula[instrument.eqs]
+  ins<-names(tt) %w/o% names(attr(tt,"depVars"))
+  if(length(ins)!=0)
+    if(length(ins)==1)
+      inst <- formula[[ins]]
+    else 
+      inst <- formula[ins]
 
   else
-    stop("...")
+    stop("twosls model requires instrument!!\n")
 
   class(formula) <- c("multiple", "list")
+
 
   # Return
   list(
        .function = "callsystemfit",
-       formula = formula[formula.eqs],
+       .hook = "changeFormula",
+       formula = formula[names(attr(tt,"depVars"))],
        method  = "2SLS",
        inst    = inst,
        data = data,
        ...
        )
+}
+
+#' @export
+changeFormula <- function (obj, model.call, zelig.call, ...) {
+  obj
 }
