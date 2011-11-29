@@ -26,7 +26,6 @@ zelig2twosls <- function (formula, ..., data) {
 
   class(formula) <- c("multiple", "list")
 
-
   # Return
   list(
        .function = "callsystemfit",
