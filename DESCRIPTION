@@ -4,11 +4,11 @@ License: GPL (>=2)
 Title: A Zelig Model
 Author: UNKNOWN AUTHOR
 Description: A Zelig Model
-Version: 0.1
+Version: 0.2
 Packaged: Tue Nov 8 12:42:13 2011
 URL: http://gking.harvard.edu/zelig
-Date: 2011-11-08
-Depends: Zelig, systemfit
+Date: 2011-12-12
+Depends: Zelig (>= 4.0-6), systemfit
 Collate: 'callsystemfit.R' 'describe.aov.R' 'describe.sur.R'
     'describe.threesls.R' 'describe.twosls.R' 'param.aov.R'
     'param.sur.R' 'param.threesls.R' 'param.twosls.R' 'qi.aov.R'
