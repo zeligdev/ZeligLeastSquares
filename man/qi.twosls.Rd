@@ -3,8 +3,8 @@
 \title{Compute Quantities of Interest for the Zelig Model twosls...}
 \usage{qi.twosls(obj, x, x1, y, num=1000, param)}
 \description{Compute Quantities of Interest for the Zelig Model twosls}
-\value{a list of key-value pairs specifying pairing titles of quantities of interest
-with their simulations}
+\value{a list of key-value pairs specifying pairing titles of quantities of
+interest with their simulations}
 \arguments{\item{obj}{a zelig object}
 \item{x}{a setx object}
 \item{x1}{an optional setx object}

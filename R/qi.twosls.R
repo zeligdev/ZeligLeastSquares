@@ -1,4 +1,6 @@
 #' Compute Quantities of Interest for the Zelig Model twosls
+#'
+#' Compute quantities of interest for the Zelig two-stage least squares model.
 #' @param obj a zelig object
 #' @param x a setx object
 #' @param x1 an optional setx object
@@ -44,10 +46,10 @@ qi.twosls <- function(obj, x=NULL, x1=NULL, y=NULL, num=1000, param=NULL) {
   for (key in names(coef.list)) {
     #
     coef <- coef.list[[key]]
-    small.x <- as.data.frame(x)[, colnames(coef)]
-
+    # print(colnames(coef))
+    small.x <- as.matrix(x$matrix[, colnames(coef)])
     #
-    eta[[key]] <- coef %*% t(small.x)
+    eta[[key]] <- coef %*% (small.x)
   }
 
 

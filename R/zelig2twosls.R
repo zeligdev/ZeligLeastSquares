@@ -29,16 +29,10 @@ zelig2twosls <- function (formula, ..., data) {
   # Return
   list(
        .function = "callsystemfit",
-       .hook = "changeFormula",
        formula = formula[names(attr(tt,"depVars"))],
        method  = "2SLS",
        inst    = inst,
        data = data,
        ...
        )
-}
-
-#' @export
-changeFormula <- function (obj, model.call, zelig.call, ...) {
-  obj
 }
